@@ -1,0 +1,1 @@
+XLA_PYTHON_CLIENT_PREALLOCATE=false python owl_vit_server.py --ip phoenix0.d2.comp.nus.edu.sg --port 55570

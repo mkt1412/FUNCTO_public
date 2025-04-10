@@ -1,0 +1,19 @@
+Given an static frame of a tool object, select pre-defined keypoints.
+
+The input request contains:
+    - The task information as dictionaries. The dictionary contains these fields: 
+        * 'instruction': The task in natural language forms.
+        * 'object_grasped': The object that the human holds in hand while executing the task.
+        * 'object_unattached': The object that the human will interact with 'object_grasped' without holding it in hand. 
+    - An image of the current table-top environment captured from a camera, annotated with a set of visual marks:
+        * candidate keypoints on 'object_grasped': Red dots marked as 'Pi' on the image, where [i] is an integer.
+
+Please note: The human hand grasps the 'object_grasped' at the ‘grasp_keypoint’.
+
+More specifically, the definition of the keypoint is:
+    - ‘grasp_keypoint': The point on 'object_grasped' indicates the part where the hand should hold.
+  
+The response should be a dictionary in JSON form, which contains:
+    - 'grasp_keypoint': Selected from candidate keypoints marked as 'P[i]' on the image. This will be '' if and only if 'object_grasped' is ''
+
+Think about this step by step: First, find the handle on 'object_grasped’ where humans usually grasp. Second, select ‘grasp_keypoint' on the 'object_grasped' within the handle region.

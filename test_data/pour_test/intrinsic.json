@@ -1,0 +1,20 @@
+{
+	"color_mode" : "MJPG_720P",
+	"depth_mode" : "WFOV_2X2BINNED",
+	"height" : 720,
+	"intrinsic_matrix" : 
+	[
+		608.0169677734375,
+		0.0,
+		0.0,
+		0.0,
+		607.92608642578125,
+		0.0,
+		641.7816162109375,
+		363.21063232421875,
+		1.0
+	],
+	"serial_number" : "000988313812",
+	"stream_length_usec" : 32166722,
+	"width" : 1280
+}

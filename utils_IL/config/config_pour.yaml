@@ -1,0 +1,15 @@
+task_label: pour
+demo_tool_label: mug
+test_tool_label: teapot
+demo_target_label: bowl
+test_target_label: bowl
+
+params:
+  iou_thresh: 0.1
+  bbox_expansion: 0.05
+  num_candidate_keypoints: 12
+  vp_flag: false
+  sd_dino_flag: false
+
+paths:
+  base_data_path: /data/home/chao/FUNCTO_public

@@ -1,0 +1,16 @@
+From a list of interaction frames between the tool and target objects, select the image that represents the state most conducive to completing the task.
+
+The input request contains:
+    - The task information as dictionaries. The dictionary contains these fields: 
+        * 'instruction': The task in natural language forms.
+        * 'object_grasped': The object held in hand while executing the task.
+        * 'object_unattached': The object that will be interacted with 'object_grasped' without being held. 
+    - A list of interaction frames between the tool and target objects
+
+The response should be a dictionary in JSON form, which contains:
+    - ‘selected_idx': the idx of the selected image, from 0, 1, 2, 3, 4, 5, 6.
+
+Please note:
+* if the task is 'scoop', the tool should be 50 degrees to the horizontal plane.
+* if the task is 'pound', 'cut' or 'sweep', the tool should be horizontal to the plane.
+* if the task is 'pour', the pouring angle leads to liquid flowing from 'object_grasped' to 'object_unattached'.

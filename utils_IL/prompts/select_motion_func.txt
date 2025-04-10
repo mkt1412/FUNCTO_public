@@ -1,0 +1,21 @@
+Given an interaction frame between two objects, select pre-defined keypoints.
+
+The input request contains:
+    - The task information as dictionaries. The dictionary contains these fields: 
+        * 'instruction': The task in natural language forms.
+        * 'object_grasped': The object that the human holds in hand while executing the task.
+        * 'object_unattached': The object that the human will interact with 'object_grasped' without holding it in hand. 
+    - An image of the current table-top environment captured from a top-down camera, annotated with a set of visual marks:
+        * candidate keypoints on 'object_grasped': Red dots marked as 'Pi' on the image, where [i] is an integer.
+
+The interaction is specified by 'function_keypoint' on the 'object_grasped'. 
+
+Please note:  The human hand grasps 'object_grasped' and moves the 'function_keypoint' to approach 'object_unattached'.
+
+More specifically, the definitions of the function point is:
+    - 'function_keypoint': The point on 'object_grasped' indicates the part that will contact 'object_unattached’.
+  
+The response should be a dictionary in JSON form, which contains:
+    - 'function_keypoint': Selected from candidate keypoints marked as 'Pi' on the image. This will be '' if and only if 'object_grasped’.
+
+Think about this step by step: First, describe the region where interaction between 'object_grasped' and 'object_unattached' happens. Second, select 'function_keypoint' on the 'object_grasped' within the interaction region.

@@ -1,0 +1,22 @@
+Refer to the position of red keypoint on the first example image, select corresponding pre-defined keypoints on the second test image.
+
+The input request contains:
+    - The task information as dictionaries. The dictionary contains these fields: 
+        * 'instruction': The task in natural language forms.
+        * 'object_grasped': The object that the human will hold in hand while executing the task.
+        * 'object_unattached': The object that the human will interact with 'object_grasped' without holding it in hand. 
+    - An example image annotated with a red keypoint.
+    - A test image of the current table-top environment captured from a top-down camera, annotated with a set of visual marks:
+        * candidate keypoints on 'object_grasped': Red dots marked as 'Pi' on the image, where [i] is an integer.
+
+Please note: select the candidate keypoint on the test image corresponds to the red keypoint annotated on the example image.
+
+The interaction is specified by 'function_keypoint' on the 'object_grasped'. 
+
+More specifically, the definitions of the function point is:
+    - 'function_keypoint': The point on 'object_grasped' indicates the part that will contact 'object_unattached’.
+  
+The response should be a dictionary in JSON form, which contains:
+    - 'function_keypoint': Selected from candidate keypoints marked as 'Pi' on the test image. 
+
+Think about this step by step: First, describe the object part where keypoint is located on the example image. Second, describe the region where interaction between 'object_grasped' and 'object_unattached' happens. Third, select 'function_keypoint' on the 'object_grasped' within the interaction region on the test image.
