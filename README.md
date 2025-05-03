@@ -23,7 +23,7 @@ Please begin by installing the following dependency packages: Open3D, SciPy, PyT
 
 2) Installing [[Grounding-SAM]](https://github.com/IDEA-Research/Grounded-Segment-Anything) another segmentation model of your choice.
 
-3) Install [[SD+DINO]](https://github.com/Junyi42/sd-dino) (optional).
+3) Installing [[SD+DINO]](https://github.com/Junyi42/sd-dino) (optional).
 
 4) After installing these models, please replace the code blocks in the original code that were used to call them from our internal servers.
 
