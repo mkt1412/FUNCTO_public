@@ -19,16 +19,16 @@ Please begin by installing the following dependency packages: Open3D, SciPy, PyT
 
 **Our code also relies on OWL-ViT, Grounding-SAM, and SD-DINO (optional), which are currently deployed on our internal servers. To use these models locally, please follow the installation instructions provided below.**
 
-1) Installing [[OWL-ViT]](https://huggingface.co/docs/transformers/en/model_doc/owlv2) another object detector of your choice.
+1) Installing [[OWL-ViT]](https://huggingface.co/docs/transformers/en/model_doc/owlv2) or another object detector of your choice.
 
-2) Installing [[Grounding-SAM]](https://github.com/IDEA-Research/Grounded-Segment-Anything) another segmentation model of your choice.
+2) Installing [[Grounding-SAM]](https://github.com/IDEA-Research/Grounded-Segment-Anything) or another segmentation model of your choice.
 
 3) Installing [[SD+DINO]](https://github.com/Junyi42/sd-dino) (optional).
 
 4) After installing these models, please replace the code blocks in the original code that were used to call them from our internal servers.
 
 ## Demo 
-**We provide a demo showcasing the pouring function:**
+**We provide a demo showcasing the task of pouring:**
 
 1) Specify the parameters in the `config.yaml` file located under `utils_IL/config`. The `vp_flag` parameter controls whether to use a VLM for pose alignment refinement, while `sd_dino_flag` determines whether to use SD+DINO for functional keypoint transfer.
 Both parameters are set to False by default.
