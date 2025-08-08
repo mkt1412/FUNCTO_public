@@ -1,5 +1,5 @@
-# An Official Code Implementation of FUNCTO: Function-Centric One-Shot Imitation Learning for Tool Manipulation
-[[paper]](https://arxiv.org/abs/2502.11744) [[website]](https://sites.google.com/view/functo) [[video]](https://www.youtube.com/watch?v=E_NXAZKRvWk&t=39s)
+# An Official Code Implementation of MimicFunc: Imitating Tool Manipulation from a Single Human Video via Functional Correspondence (CoRL 2025)
+[[Preprint]](https://arxiv.org/abs/2502.11744) [[website]](https://sites.google.com/view/functo) [[video]](https://youtu.be/H0sEzJufpeE)
 
 [Chao Tang](https://mkt1412.github.io/), Anxing Xiao, Yuhong Deng, Tianrun Hu, Wenlong Dong, Hanbo Zhang, David Hsu, and Hong Zhang  
 
